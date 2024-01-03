@@ -14,8 +14,9 @@ Sistema responsável pelo gerenciamento de Caixa, onde é possível realizar ent
 ### Como executar:
 
 * Baixar API_Caixa no repositório https://github.com/elinessg/API_Caixa
+* Executar a API e executar o comando update-database no Console do Gerenciador para criar o banco
 * Baixar API_Caixa_Relatorio no repositório https://github.com/elinessg/API_Caixa_Relatorio
 * Executar Script Proc_RelatorioConsolidado.sql da pasta scripts do projeto API_Caixa_Relatorio
-* Executar as duas APIS
+* Executar a API
 * Executar o Projeto Gerenciamento_Caixa
   
