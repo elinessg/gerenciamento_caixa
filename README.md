@@ -7,6 +7,7 @@ Sistema responsável pelo gerenciamento de Caixa, onde é possível realizar ent
 * ASP.net Core
 * API.net Core
 * JavaScript
+* JQuery
 * Banco de Dados SQL
 
   
