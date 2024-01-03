@@ -1,4 +1,5 @@
 # Gerenciamento Caixa
+Sistema responsável pelo gerenciamento de Caixa, onde é possível realizar entradas, saídas e emitir um relatório consolidado diário de entradas, saídas e saldo.
 
 ### Tecnologias Utilizadas
 * ASP.net Core
