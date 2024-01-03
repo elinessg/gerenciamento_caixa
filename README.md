@@ -1,13 +1,13 @@
 # Gerenciamento Caixa
 
-## Tecnologias Utilizadas
+### Tecnologias Utilizadas
 * ASP.net Core
 * API.net Core
 * JavaScript
 * Banco de Dados SQL
 
   
-## Como executar:
+### Como executar:
 
 * Baixar API_Caixa no repositório https://github.com/elinessg/API_Caixa
 * Baixar API_Caixa_Relatorio no repositório https://github.com/elinessg/API_Caixa_Relatorio
