@@ -1,6 +1,6 @@
 # Gerenciamento Caixa
 
 
-##Como executar:
+## Como executar:
 
-*Baixar API_Caixa no repositorio https://github.com/elinessg/API_Caixa
+* Baixar API_Caixa no repositorio https://github.com/elinessg/API_Caixa
