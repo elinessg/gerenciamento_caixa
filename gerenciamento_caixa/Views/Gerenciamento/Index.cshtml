@@ -1,0 +1,51 @@
+﻿@model gerenciamento_caixa.Models.TB_Fluxo_Caixa
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Gerenciamento</h1>
+
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Index">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                
+            <div class="form-group">
+                <label asp-for="TipoMovimento" class="control-label">Tipo de Movimento</label>
+                @Html.DropDownListFor(model => model.TipoMovimento,
+                         new List<SelectListItem> {
+                new SelectListItem { Value = "E" , Text = "Entrada" },
+                new SelectListItem { Value = "S" , Text = "Saída" },
+                
+                },
+                         new { @class = "form-control" })
+                <span asp-validation-for="TipoMovimento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ValorMovimentacao" class="control-label">Valor</label>
+                <input asp-for="ValorMovimentacao" class="form-control" />
+                <span asp-validation-for="ValorMovimentacao" class="text-danger"></span>
+            </div>
+         
+            <div class="form-group">
+                <label asp-for="DescricaoMovimentacao" class="control-label">Descrição</label>
+                <input asp-for="DescricaoMovimentacao" class="form-control" />
+                <span asp-validation-for="DescricaoMovimentacao" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Salvar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@* <div>
+    <a asp-action="Index">Back to List</a>
+</div> *@
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

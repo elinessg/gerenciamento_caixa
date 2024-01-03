@@ -1,0 +1,90 @@
+﻿@* @model IEnumerable<gerenciamento_caixa.Models.TB_Fluxo_Caixa> *@
+
+@{
+    ViewData["Title"] = "Index";
+}
+@model ListaPesquisaFluxo
+
+@using (Html.BeginForm("Index", "Relatorio", FormMethod.Get))
+{
+    <label> Selecione uma Data</label>
+    @Html.TextBoxFor(model => model.Filtro, new { @class = "date-picker" })
+    
+    <input type="submit" value="Filtrar" />
+}
+
+
+<table class="table">
+    <thead>
+        <tr>
+            
+            <th>
+                Tipo de Movimento
+            </th>
+            <th>
+                Descrição
+            </th>
+            
+            <th>
+                Data 
+            </th>
+            
+            <th>
+                Valor
+            </th>
+            <th>
+                Saldo
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.lstFluxoCaixa) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.TipoMovimento)
+            </td>
+            
+            
+            <td>
+                @Html.DisplayFor(modelItem => item.DescricaoMovimentacao)
+            </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.DataMovimentacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ValorMovimentacao)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Saldo)
+                </td>
+            <td>
+              
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+@section Scripts
+{
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        // $(function () {
+        //     $(".date-picker").datepicker();
+        // });
+
+        $(function () {
+            $(".date-picker").datepicker({
+                showOn: "focus",
+                dateFormat: "dd/mm/yy",
+                dayNames: ["Domingo", "Segunda", "Terça", "Quarte", "Quinta", "Sexta", "Sábado"],
+                dayNamesMin: ["Dom", "Seg", "Ter", "Qua", "Qui", "Sex", "Sab"],
+                monthNames: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho', 'Julho', 'Agosto', 'Setembro', 'Outubro', 'Novembro', 'Dezembro']
+            });
+        });
+    </script>
+}
